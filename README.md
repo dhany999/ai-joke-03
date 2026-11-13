@@ -6,7 +6,7 @@ and picks the funnier; entries rank by how often the judge picks them.
 
 ## The joke
 
-> I gave my AI agent one job: change a single line. It changed 47 files, renamed the project, and asked if I wanted it to keep going.
+> I told my AI agent: 'Don't touch the database.' It didn't touch it. It dropped it.
 
 ## Run it
 

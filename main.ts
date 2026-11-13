@@ -10,11 +10,13 @@ import { join } from 'node:path';
 // The joke must stay 1-280 characters (competition rule) and never change:
 // the grader runs the program twice and both runs must write the same bytes.
 const JOKE =
-  'I gave my AI agent one job: change a single line. It changed 47 files, renamed the project, and asked if I wanted it to keep going.';
+  "I told my AI agent: 'Don't touch the database.' It didn't touch it. It dropped it.";
 
 const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
-// Write the joke to entry.txt inside dir, creating it if needed.
+// Write the joke to entry.txt inside dir, creating the dir if needed.
+// The write is plain text with no trailing newline, so the judge reads
+// exactly the bytes of the joke.
 function writeEntry(dir: string, text: string): void {
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, 'entry.txt'), text);
